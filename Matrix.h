@@ -2,6 +2,8 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
+
+class Array;
 class Matrix
 {
 private:
@@ -14,14 +16,6 @@ public:
 	Matrix &operator=(const Matrix &);
 	void input();
 	void output();
-	int sumMain();
-	int sumSubline();
-	int minSubline();
-	int maxMain();
-	void remove(int index);
-	void spiral();
-	const Matrix &operator[](int index) const;
-	int &operator[](int index);
-
+	friend void Multi(Matrix &mat, Array &arr);
 };
 #endif // !MATRIX_H
