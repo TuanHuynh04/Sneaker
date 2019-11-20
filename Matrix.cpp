@@ -1,8 +1,7 @@
 #include "pch.h"
+#include "Array.h"
 #include "Matrix.h"
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
 
 using namespace std;
 
@@ -46,13 +45,12 @@ Matrix::~Matrix()
 	a = NULL;
 }
 void Matrix::input() {
-	cout <<"Enter Matrix"<<endl;
+	cout << "Enter Matrix" << endl;
 	for (int i = 0; i < this->n; i++)
 		for (int j = 0; j < this->n; j++)
 		{
 			cout << "\tEnter element [" << i << "][" << j << "]:";
-			 a[i][j] = rand() % 10 + 1;
-			 cout << a[i][j]<<endl;
+			cin >> a[i][j];
 		}
 }
 void Matrix::output() {
@@ -64,4 +62,15 @@ void Matrix::output() {
 			cout << a[i][j] << "	";
 		}
 	}
+}
+void Matrix::Multi(Array &arr) {
+	Array arr1(3);
+	for (int i = 0; i < arr.n; i++) {
+		arr1.a[i] = 0;
+		for (int j = 0; j < this->n; j++) {
+			arr1.a[i] = arr1.a[i] + this->a[i][j] * arr.a[i];
+		}
+	}
+	cout << endl;
+	arr1.output();
 }

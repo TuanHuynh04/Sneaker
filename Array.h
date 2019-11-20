@@ -16,6 +16,6 @@ public:
 	Array &operator =(const Array &arr);
 	void input();
 	void output();
-	friend void Multi(Matrix &mat, Array &arr);
+	friend void Matrix::Multi(Array &arr);
 };
 #endif // !ARRAY_H

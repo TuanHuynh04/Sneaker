@@ -2,15 +2,13 @@
 #include "Array.h"
 #include "Matrix.h"
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
 
 using namespace std;
 
 Array::Array(int n)
 {
 	this->n = n;
-	a = new int [n];
+	a = new int[n];
 }
 Array::Array(const Array &arr) {
 	this->n = arr.n;
@@ -26,11 +24,10 @@ Array &Array::operator=(const Array &arr) {
 	return *this;
 }
 void Array::input() {
-	cout << "\nEnter Array"<<endl;
+	cout << "\nEnter Array" << endl;
 	for (int i = 0; i < this->n; i++) {
-		cout << "\ta[" << i<< "]:";
-		a[i] = rand() % 10 + 1;
-		cout << a[i]<<endl;
+		cout << "\ta[" << i << "]:";
+		cin >> a[i];
 	}
 }
 void Array::output() {

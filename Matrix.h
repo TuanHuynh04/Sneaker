@@ -2,7 +2,6 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
-
 class Array;
 class Matrix
 {
@@ -16,6 +15,6 @@ public:
 	Matrix &operator=(const Matrix &);
 	void input();
 	void output();
-	friend void Multi(Matrix &mat, Array &arr);
+	void Multi(Array &arr);
 };
 #endif // !MATRIX_H
